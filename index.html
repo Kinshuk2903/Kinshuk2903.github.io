@@ -1,115 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kinshuk | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    * {
-      scroll-behavior: smooth;
-    }
-    header, footer {
-      animation: fadeInDown 1s ease-out;
-    }
-    section {
-      animation: fadeInUp 1s ease-in;
-    }
-    .project {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .typing-text {
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: #333;
-      border-right: 2px solid #333;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 4s steps(60, end) forwards, blink 0.75s step-end infinite;
-    }
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
-    }
-    @keyframes blink {
-      from, to { border-color: transparent; }
-      50% { border-color: #333; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinshuk | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Kinshuk</h1>
+    <!-- Navigation -->
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+        <div class="container">
+            <a href="#" class="logo">Kinshuk</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </div>
     </nav>
-  </header>
 
-  <section id="hero">
-    <img src="images/profile.jpg" alt="Kinshuk" class="profile-pic" />
-    <p class="typing-text">Final-year B.Tech CSE student passionate about AI, ML, and solving real-world problems through code.</p>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Hi, I'm <span>Kinshuk</span></h1>
+            <p>A passionate developer building cool stuff.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Kinshuk is a final-year B.Tech Computer Science and Engineering student at KIIT University, with a strong focus on machine learning, artificial intelligence, and data analytics. He has worked on real-world projects like traffic prediction, sentiment analysis, and recruitment optimization, and has interned at organizations including Cognifyz Technologies and Central Coalfields Limited. Passionate about data-driven innovation, Kinshuk combines technical proficiency with practical experience to solve complex problems using AI and software development.</p>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm a student/developer with experience in Python, JavaScript, and web development. I love solving problems and contributing to open-source projects.</p>
+            <div class="skills">
+                <span>Python</span>
+                <span>JavaScript</span>
+                <span>HTML/CSS</span>
+                <span>React</span>
+                <span>Git</span>
+            </div>
+        </div>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>A brief description of the project and technologies used.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>A brief description of the project and technologies used.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="project">
-      <h3>Employee Management System</h3>
-      <p>A Java-based application designed to manage employee records, featuring functionalities such as adding, viewing, searching, and deleting employee information.</p>
-      <a href="https://github.com/Kinshuk2903/Employee-Management-System">GitHub Repo</a>
-    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Feel free to reach out for collaborations or just a chat!</p>
+            <div class="social-links">
+                <a href="https://github.com/kinshuk2903" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/kinshuk2903" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:kinshuk@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
 
-    <div class="project">
-      <h3>A.I. Sentiment Analysis Chatbot</h3>
-      <p>Chatbot equipped with sentiment analysis using NLP and machine learning to assess user messages as positive, negative, or neutral.</p>
-      <a href="https://github.com/Kinshuk2903/A.I.-Sentimental-Chat-bot">GitHub Repo</a>
-    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kinshuk. All rights reserved.</p>
+        </div>
+    </footer>
 
-    <div class="project">
-      <h3>Parking Management System</h3>
-      <p>A C-based system automating parking operations, including slot allocation and real-time fee computation for efficient management.</p>
-      <a href="https://github.com/Kinshuk2903/Parking-Management-System">GitHub Repo</a>
-    </div>
-
-    <div class="project">
-      <h3>Employment Analytics</h3>
-      <p>Machine learning-based recruitment system that aligns candidates to roles and forecasts hiring trends using Python and NLP.</p>
-      <a href="https://github.com/Kinshuk2903/Employment-Analytics-Leveraging-Machine-Learning-for-Job-Candidate-Alignment-and-Trend-Forecasting">GitHub Repo</a>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <ul>
-      <li>Email: <a href="mailto:22051081@kiit.ac.in">22051081@kiit.ac.in</a></li>
-      <li>GitHub: <a href="https://github.com/Kinshuk2903">Kinshuk2903</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/kinshuk-b18400282/">Kinshuk on LinkedIn</a></li>
-      <li><a href="Resume.pdf" target="_blank">Download Resume</a></li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>© 2025 Kinshuk. All rights reserved.</p>
-  </footer>
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
