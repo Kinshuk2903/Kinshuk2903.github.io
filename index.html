@@ -5,6 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kinshuk | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+    header, footer {
+      animation: fadeInDown 1s ease-out;
+    }
+    section {
+      animation: fadeInUp 1s ease-in;
+    }
+    .project {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .typing-text {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #333;
+      border-right: 2px solid #333;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(60, end) forwards, blink 0.75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: #333; }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -18,7 +62,7 @@
 
   <section id="hero">
     <img src="images/profile.jpg" alt="Kinshuk" class="profile-pic" />
-    <p>Final-year B.Tech Computer Science and Engineering student at KIIT University passionate about Machine Learning, AI, and data-driven problem solving.</p>
+    <p class="typing-text">Final-year B.Tech CSE student passionate about AI, ML, and solving real-world problems through code.</p>
   </section>
 
   <section id="about">
